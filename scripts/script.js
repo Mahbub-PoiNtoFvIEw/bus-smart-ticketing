@@ -11,8 +11,9 @@ for(const btn of btns){
     })
 }
 const successfulMessageBox = document.getElementById('successful-message');
+// successfulMessageBox.style.display = 'block';
 function finishedAndShowDialogBox(){
-    successfulMessageBox.style.display = 'block';
+    userBillsDetails();
 }
 document.getElementById('close-message').addEventListener('click', function(){
     successfulMessageBox.style.display = 'none';

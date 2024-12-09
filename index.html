@@ -224,19 +224,36 @@
           class="relative seat-container flex flex-col lg:flex-row bg-white lg:mx-20 rounded-2xl my-10"
         >
         <!-- successful dialog box start, initially hidden -->
-        <div id="successful-message" class="font-roboto hidden rounded-lg lg:w-[850px] lg:h-[500px] w-[410px] h-[230px] bg-[#1E1E1E99] z-40 absolute lg:top-32 lg:left-40 top-[950px] left-2">
+        <div id="successful-message" class="font-roboto hidden rounded-lg lg:w-[850px] lg:h-[500px] w-[360px] h-[360px] bg-[#1E1E1E99] z-40 absolute lg:top-32 lg:left-40 top-[950px] left-10">
            <img id="close-message" class="absolute bg-white lg:p-2 rounded-full lg:right-4 lg:top-4 right-1 top-1" src="images/cross-30.png" alt="">
-          <div class="flex flex-col lg:gap-6 justify-center items-center lg:w-[600px] lg:h-[350px] w-[330px] h-[200px] bg-white absolute lg:top-[15%] top-[5%] lg:left-[15%] left-[9%] rounded-xl">
-            <div>
-              <img class="w-10 ml-4" src="images/success.png" alt="">
-              <h1 class="text-center lg:mt-6 text-[#27AE60] font-bold">SUCCESS</h1>
-            </div>
-            <div class="text-center text-xs">
+          <div class="flex flex-col lg:gap-1 justify-center items-center lg:w-[600px] py-2 w-[270px]  bg-white absolute lg:top-[15%] top-[5%] lg:left-[15%] left-[9%] rounded-xl">
+            <div class="text-center lg:text-[.6rem] text-[.4rem] flex flex-col justify-center items-center">
+              <img class="lg:w-8 w-6 lg:ml-2 " src="images/success.png" alt="">
+              <h1 class="text-[#27AE60] font-bold">SUCCESS</h1>
               <p class="text-[#4A4A4A]">Thank you for Booking Our Bus Seats. <br>
                 We are working hard to find the best service and deals for you. 
                 <br><span class="text-[#4A4A4A99]">Shortly you will find a confirmation in your email.</span></p>
-              <button class="btn mt-4 bg-[#27AE60] text-white px-10 lg:px-16 rounded-3xl">Continue</button>
             </div>
+            <!-- ticket and user bills container start -->
+            <div id="bill" class="lg:text-[.7rem] text-[.5rem]">
+              <h3 class=" border-b-[1px] border-dashed border-[#0307124D]">Your Phone Number : <span id="user-number-bill" class="font-bold"></span></h3>
+              <div id="seat-booked" class="border-b-[1px] border-dashed border-[#0307124D] mt-1">
+
+              </div>
+              <p class="text-center">You Booked: <span id="seat-quantity" class="text-[.6rem]"></span> Seats</p>
+              <p class="border-y-[1px] border-dashed border-[#0307124D] mt-1 flex justify-between">Total Price<span id="total-bills"></span></p>
+              <p class="font-bold text-center">you got <span id="discount-bill" class="text-green-700 text-[.6rem]"></span> discount.</p>
+              <p class="border-t-[1px] border-dashed border-[#0307124D] mt-1 flex justify-between">Grand Total<span id="grand-total-bills"></span></p>
+              <!-- <div id="total-discount-bills" class="border-b-[1px] border-dashed border-[#0307124D] mt-1">
+
+              </div>
+              <div id="grand-total-bills" class="border-b-[1px] border-dashed border-[#0307124D] mt-1">
+
+              </div> -->
+            </div>
+            <h2 class="text-[.6rem] text-red-700 font-bold mt-4">Thanks For Confirmation...!</h2>
+            <!-- user bills container end -->
+            <button id="downloadPdf" class="btn mt-1 bg-[#27AE60] text-white px-6 lg:px-16 rounded-3xl">Continue</button>
           </div>
         </div>
         <!-- successful dialog box end -->
