@@ -15,10 +15,7 @@ const successfulMessageBox = document.getElementById('successful-message');
 function finishedAndShowDialogBox(){
     userBillsDetails();
 }
-document.getElementById('close-message').addEventListener('click', function(){
+document.getElementById('continue').addEventListener('click', function(){
     successfulMessageBox.style.display = 'none';
+    window.location.reload();
 })
-
-function applyCoupon(){
-    applyCouponById('coupon-code','total-seat-price');
-}
