@@ -12,8 +12,11 @@ function updateSelectedSeatInfo(totalPriceElementId, seatInfoId, button) {
   // console.log('inner text total seat',typeof totalSeatValue);
   const totalPriceElement = document.getElementById(totalPriceElementId);
   const seatInfoDiv = document.getElementById(seatInfoId);
+  // create new tag
   const seatEntry = document.createElement("div");
+  // add css class in tag
   seatEntry.classList.add("flex", "justify-between");
+  // add tag inside tag
   seatEntry.innerHTML = `
       <p>${seatNumber}</p>
       <p>${seatClass}</p>
@@ -76,7 +79,6 @@ function applyCouponDisable() {
     }
   }
 }
-
 function applyCouponById(couponElementId, totalPriceElementId) {
   let discount = 0;
   let paytAmount = 0;
@@ -92,7 +94,7 @@ function applyCouponById(couponElementId, totalPriceElementId) {
   const discountPercent = document.getElementById("discount-percent");
   const discountAmount = document.getElementById("discount-amount");
   const grandTotalElement = document.getElementById("grand-total-price");
-  const errorMessage = document.getElementById("error-display");
+  const errorMessage = document.getElementById("error-message");
   // const grandTotal = parseInt(grandTotalElement.innerText);
   if (couponCode === code1.toUpperCase()) {
     discount = (totalPriceValue * 15) / 100;
@@ -115,15 +117,6 @@ function applyCouponById(couponElementId, totalPriceElementId) {
     errorMessage.style.display = "none";
     // userBillsDetails(discount);
   } else {
-    const seatEntry = document.createElement("p");
-    seatEntry.classList.add(
-      "text-2xl",
-      "text-red-600",
-      "font-bold",
-      "text-center"
-    );
-    seatEntry.innerHTML = `Please input Valid Code..!`;
-    errorMessage.appendChild(seatEntry);
     errorMessage.style.display = "block";
   }
 }
